@@ -1,0 +1,74 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="site-header-logo">
+        <h1 class="text-center">
+            CodeWithPrince
+        </h1>
+    </div>
+
+    <div class="row p-4">
+        <div class="card m-auto" style="width: 90%;" data-aos="fade-left">
+            <div class="card-body">
+                <div id="chart1"></div>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam beatae eos esse hic tempore, itaque dolor quod. Eligendi debitis 
+                    doloremque itaque architecto velit autem suscipit ut laborum optio maxime at 
+                    facere perspiciatis quae molestiae nemo, saepe impedit. Quaerat corporis eius 
+                    libero fugit. Debitis non nobis repudiandae ex soluta vero repellendus omnis eos, 
+                    voluptate mollitia dolorem asperiores sint itaque consequuntur voluptatum totam 
+                    fugit aut nemo maiores! Laboriosam quidem error possimus nobis eligendi dolor aut 
+                    ullam voluptas officiis similique placeat modi, eaque voluptates dolores odit optio, 
+                    pariatur molestias. Eum praesentium totam error aliquam,
+                    tempore in quia exercitationem! Temporibus corporis asperiores esse ipsum?</p>
+            </div>
+            </div>
+        </div>
+
+        <div class="card mb-4 m-auto" style="width: 90%;" data-aos="fade-left">
+            <div class="card-body">
+                <div id="chart2"></div>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam beatae eos esse hic tempore, itaque dolor quod. Eligendi debitis 
+                    doloremque itaque architecto velit autem suscipit ut laborum optio maxime at 
+                    facere perspiciatis quae molestiae nemo, saepe impedit. Quaerat corporis eius 
+                    libero fugit. Debitis non nobis repudiandae ex soluta vero repellendus omnis eos, 
+                    voluptate mollitia dolorem asperiores sint itaque consequuntur voluptatum totam 
+                    fugit aut nemo maiores! Laboriosam quidem error possimus nobis eligendi dolor aut 
+                    ullam voluptas officiis similique placeat modi, eaque voluptates dolores odit optio, 
+                    pariatur molestias. Eum praesentium totam error aliquam,
+                    tempore in quia exercitationem! Temporibus corporis asperiores esse ipsum?</p>
+            </div>
+        </div>
+
+        <div class="card mb-4 m-auto" style="width: 90%;" data-aos="slide-up">
+            <div class="card-body">
+                <div id="chart3"></div>
+                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Quibusdam beatae eos esse hic tempore, itaque dolor quod. Eligendi debitis 
+                    doloremque itaque architecto velit autem suscipit ut laborum optio maxime at 
+                    facere perspiciatis quae molestiae nemo, saepe impedit. Quaerat corporis eius 
+                    libero fugit. Debitis non nobis repudiandae ex soluta vero repellendus omnis eos, 
+                    voluptate mollitia dolorem asperiores sint itaque consequuntur voluptatum totam 
+                    fugit aut nemo maiores! Laboriosam quidem error possimus nobis eligendi dolor aut 
+                    ullam voluptas officiis similique placeat modi, eaque voluptates dolores odit optio, 
+                    pariatur molestias. Eum praesentium totam error aliquam,
+                    tempore in quia exercitationem! Temporibus corporis asperiores esse ipsum?</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- plotly CDN -->
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script type="text/javascript">
+        var graphs1 = {{ graph1JSON | safe}};
+        Plotly.plot("chart1", graphs1,{});
+
+        var graphs2 = {{ graph2JSON | safe}};
+        Plotly.plot("chart2", graphs2,{});
+
+        var graphs3 = {{ graph3JSON | safe}};
+        Plotly.plot("chart3", graphs3,{});
+    </script>
+
+{% endblock %}
