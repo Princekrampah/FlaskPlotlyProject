@@ -6,12 +6,12 @@ import plotly
 import plotly.express as px
 
 
+# @app.route('/')
+# def index():
+#     return render_template('index.html')
+
 @app.route('/')
 def index():
-    return render_template('index.html')
-
-@app.route('/chart1')
-def chart1():
 
     # Graph One
     df = px.data.medals_wide()
